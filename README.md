@@ -8,8 +8,9 @@ To run the Telegram bot, you need to execute the `button.py` script. This script
 
 Ensure that you have the necessary dependencies installed, such as `telebot` and `telegram`. You can install them via pip:
 
-pip install pyTelegramBotAPI
-pip install python-telegram-bot
+<code>pip install pyTelegramBotAPI</code>
+
+<code>pip install python-telegram-bot</code>
 
 
 Before running the bot, make sure to configure the necessary paths and settings in the code, such as the bot token, allowed chat IDs, and file paths.
@@ -18,7 +19,7 @@ Before running the bot, make sure to configure the necessary paths and settings 
 
 You can also run the bot as a systemd service to ensure it starts automatically and restarts in case of failure. Here's an example systemd unit file:
 
-<code>[Unit]
+```[Unit]
 Description=Check TLS Bot
 After=network.target
 
@@ -29,16 +30,17 @@ ExecStart=/usr/bin/python3 /path/to/your/project/directory/button.py
 Restart=always
 
 [Install]
-WantedBy=multi-user.target</code>
+WantedBy=multi-user.target
+```
 
 Replace `your_username` with your username and `/path/to/your/project/directory` with the path to your project directory.
 
 Save this file as `check_tls_bot.service` in `/etc/systemd/system/` directory and activate it using the following commands:
 
-sudo systemctl daemon-reload
+```sudo systemctl daemon-reload
 sudo systemctl enable check_tls_bot.service
 sudo systemctl start check_tls_bot.service
-
+```
 
 Now your bot will start automatically upon system boot and restart in case of any failure.
 
