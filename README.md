@@ -26,7 +26,21 @@ After=network.target
 [Service]
 User=your_username
 WorkingDirectory=/path/to/your/project/directory
-ExecStart=/usr/bin/python3 /path/to/your/project/directory/button.py
+ExecStart=/usr/bin/python3 /path/to/your/project/directory/bit/button.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```[Unit]
+Description=Check TLS Bot
+After=network.target
+
+[Service]
+User=your_username
+WorkingDirectory=/path/to/your/project/directory
+ExecStart=/usr/bin/python3 /path/to/your/project/directory/bin/certs_bot.py
 Restart=always
 
 [Install]

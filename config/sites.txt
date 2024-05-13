@@ -1,0 +1,5 @@
+# sites
+
+ya.ru # yandex
+vk.com # vk
+example.com #etc
