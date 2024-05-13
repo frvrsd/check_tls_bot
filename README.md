@@ -40,7 +40,7 @@ After=network.target
 [Service]
 User=your_username
 WorkingDirectory=/path/to/script/
-ExecStart=/usr/bin/python3 /path/to/script//bin/certs_bot.py
+ExecStart=/usr/bin/python3 /path/to/script/bin/certs_bot.py
 Restart=always
 
 [Install]
