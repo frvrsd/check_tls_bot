@@ -49,11 +49,13 @@ WantedBy=multi-user.target
 
 Replace `your_username` with your username and `/path/to/your/project/directory` with the path to your project directory.
 
-Save this file as `check_tls_bot.service` in `/etc/systemd/system/` directory and activate it using the following commands:
+Save this files as `check_tls_bot.service` and 'check_tls_bot_buttons/service' in `/etc/systemd/system/` directory and activate it using the following commands:
 
 ```sudo systemctl daemon-reload
 sudo systemctl enable check_tls_bot.service
+sudo systemctl enable check_tls_bot_buttons.service
 sudo systemctl start check_tls_bot.service
+sudo systemctl start check_tls_bot_buttons.service
 ```
 
 Now your bot will start automatically upon system boot and restart in case of any failure.
